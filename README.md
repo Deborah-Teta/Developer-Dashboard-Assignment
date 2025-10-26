@@ -2,7 +2,7 @@ Developer Dashboard: A well built responsive and interactive developer dashboard
 
 APIs used:
 Github: 'https://api.github.com/users/Deborah-teta'
-Crrent-weather-condition: 'https://wttr.in/$%7Blat%7D,$%7Blon%7D?format=j1'
+Current-weather-condition: 'https://wttr.in/$%7Blat%7D,$%7Blon%7D?format=j1'
 
 Technologies used
 -React
