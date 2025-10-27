@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "../context/ThemeProvider";
+import {useTheme} from "../context/ThemeProvider";
 import useGithub from "../hooks/useGithub";
 
 export default function GithubCard() {
@@ -36,7 +36,7 @@ export default function GithubCard() {
   if (error) {
     return (
       <div className={`rounded-xl shadow-lg p-6 transition-colors duration-300 ${
-        isDark ? 'bg-gray-800' : 'bg-white'
+        isDark ? 'bg-gray-800' : 'bg-white text-black'
       }`}>
         <h2 className="text-xl font-bold mb-4 flex items-center">
           <span className="mr-2">🐙</span>
@@ -67,7 +67,7 @@ export default function GithubCard() {
   // Success state - Render the actual data
   return (
     <div className={`rounded-xl shadow-lg p-6 transition-colors duration-300 ${
-      isDark ? 'bg-gray-800' : 'bg-white'
+      isDark ? 'bg-gray-800' : 'bg-white text-black'
     }`}>
       <h2 className="text-xl font-bold mb-4 flex items-center">
         <span className="mr-2">🐙</span>
@@ -83,7 +83,7 @@ export default function GithubCard() {
         <div>
           <h3 className="text-lg font-semibold">{data.name || data.login}</h3>
           <p className={`text-sm ${
-            isDark ? 'text-gray-400' : 'text-gray-600'
+            isDark ? 'text-gray-400' : 'text-gray-900'
           }`}>
             @{data.login}
           </p>
@@ -100,33 +100,33 @@ export default function GithubCard() {
 
       <div className="grid grid-cols-3 gap-4 mt-6">
         <div className={`text-center p-3 rounded-lg ${
-          isDark ? 'bg-gray-700' : 'bg-gray-100'
+          isDark ? 'bg-gray-700' : 'bg-gray-400 text-black'
         }`}>
           <div className="text-lg font-bold">{data.public_repos}</div>
           <div className={`text-xs ${
-            isDark ? 'text-gray-400' : 'text-gray-600'
+            isDark ? 'text-gray-400' : 'text-gray-900'
           }`}>
             Repositories
           </div>
         </div>
         
         <div className={`text-center p-3 rounded-lg ${
-          isDark ? 'bg-gray-700' : 'bg-gray-100'
+          isDark ? 'bg-gray-700' : 'bg-gray-400 text-black'
         }`}>
           <div className="text-lg font-bold">{data.followers}</div>
           <div className={`text-xs ${
-            isDark ? 'text-gray-400' : 'text-gray-600'
+            isDark ? 'text-gray-400' : 'text-gray-900'
           }`}>
             Followers
           </div>
         </div>
         
         <div className={`text-center p-3 rounded-lg ${
-          isDark ? 'bg-gray-700' : 'bg-gray-100'
+          isDark ? 'bg-gray-700' : 'bg-gray-400 text-black'
         }`}>
           <div className="text-lg font-bold">{data.following}</div>
           <div className={`text-xs ${
-            isDark ? 'text-gray-400' : 'text-gray-600'
+            isDark ? 'text-gray-400' : 'text-gray-900'
           }`}>
             Following
           </div>
@@ -141,7 +141,7 @@ export default function GithubCard() {
           className={`inline-flex items-center px-4 py-2 rounded-lg font-medium transition-colors duration-300 ${
             isDark
               ? 'bg-gray-700 hover:bg-gray-600 text-white'
-              : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
+              : 'bg-gray-200 hover:bg-gray-400 text-gray-900'
           }`}
         >
           View Profile →

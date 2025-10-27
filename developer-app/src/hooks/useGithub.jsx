@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-
 const Base_url = 'https://api.github.com/users/Deborah-teta';
 
 export default function useGithub () {
@@ -13,7 +12,7 @@ export default function useGithub () {
             setLoading(true);
             setError(null);
             try{
-                const response = await fetch('${Base_url}');
+                const response = await fetch(Base_url);
                 const json = await response.json();
 
                 const profile = {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useTheme } from '../context/ThemeProvider';
+import {useTheme} from '../context/ThemeProvider';
 import useWeather from '../hooks/useWeather';
 
 const WeatherCard = () => {
@@ -73,7 +73,7 @@ const WeatherCard = () => {
   if (error) {
     return (
       <div className={`rounded-xl shadow-lg p-6 transition-colors duration-300 ${
-        isDark ? 'bg-gray-800' : 'bg-white'
+        isDark ? 'bg-gray-800' : 'bg-white text-black'
       }`}>
         <h2 className="text-xl font-bold mb-4 flex items-center">
           <span className="mr-2">🌤️</span>
@@ -93,7 +93,7 @@ const WeatherCard = () => {
   if (!data) {
     return (
       <div className={`rounded-xl shadow-lg p-6 transition-colors duration-300 ${
-        isDark ? 'bg-gray-800' : 'bg-white'
+        isDark ? 'bg-gray-800' : 'bg-white text-black'
       }`}>
         <h2 className="text-xl font-bold mb-4">Current Weather</h2>
         <p>No weather data available</p>
@@ -103,7 +103,7 @@ const WeatherCard = () => {
 
   return (
     <div className={`rounded-xl shadow-lg p-6 transition-colors duration-300 ${
-      isDark ? 'bg-gray-800' : 'bg-white'
+      isDark ? 'bg-gray-800' : 'bg-white text-black'
     }`}>
       <h2 className="text-xl font-bold mb-4 flex items-center">
         <span className="mr-2">🌤️</span>
@@ -112,7 +112,7 @@ const WeatherCard = () => {
 
       {/* Current Time */}
       <div className={`text-center mb-6 p-3 rounded-lg ${
-        isDark ? 'bg-blue-900/30' : 'bg-blue-50'
+        isDark ? 'bg-blue-900/30' : 'bg-blue-900 text-black'
       }`}>
         <div className="text-sm opacity-75">Current Time</div>
         <div className="text-xl font-mono font-bold">
@@ -126,7 +126,7 @@ const WeatherCard = () => {
           <h3 className="text-2xl font-bold">
             {Math.round(data.temperature)}°C
           </h3>
-          <p className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p className={`text-lg ${isDark ? 'text-gray-400' : 'text-black'}`}>
             {data.city}, {data.country}
           </p>
         </div>
@@ -137,7 +137,7 @@ const WeatherCard = () => {
 
       {/* Weather Condition */}
       <div className={`text-center mb-4 p-2 rounded ${
-        isDark ? 'bg-gray-700' : 'bg-gray-100'
+        isDark ? 'bg-gray-700' : 'bg-gray-400 text-black'
       }`}>
         <p className="font-medium capitalize">
           {data.description}
@@ -147,7 +147,7 @@ const WeatherCard = () => {
       {/* Weather Details */}
       <div className="grid grid-cols-2 gap-4">
         <div className={`p-3 rounded-lg ${
-          isDark ? 'bg-gray-700' : 'bg-gray-100'
+          isDark ? 'bg-gray-700' : 'bg-gray-400 text-black'
         }`}>
           <div className="text-sm opacity-75">Feels Like</div>
           <div className="font-semibold">
@@ -156,14 +156,14 @@ const WeatherCard = () => {
         </div>
         
         <div className={`p-3 rounded-lg ${
-          isDark ? 'bg-gray-700' : 'bg-gray-100'
+          isDark ? 'bg-gray-700' : 'bg-gray-400 text-black'
         }`}>
           <div className="text-sm opacity-75">Humidity</div>
           <div className="font-semibold">{data.humidity}%</div>
         </div>
         
         <div className={`p-3 rounded-lg ${
-          isDark ? 'bg-gray-700' : 'bg-gray-100'
+          isDark ? 'bg-gray-700' : 'bg-gray-400 text-black'
         }`}>
           <div className="text-sm opacity-75">Wind Speed</div>
           <div className="font-semibold">
@@ -172,7 +172,7 @@ const WeatherCard = () => {
         </div>
         
         <div className={`p-3 rounded-lg ${
-          isDark ? 'bg-gray-700' : 'bg-gray-100'
+          isDark ? 'bg-gray-700' : 'bg-gray-400 text-black'
         }`}>
           <div className="text-sm opacity-75">Pressure</div>
           <div className="font-semibold">
@@ -184,7 +184,7 @@ const WeatherCard = () => {
       {/* Visibility and Observation Time */}
       <div className="grid grid-cols-2 gap-4 mt-4">
         <div className={`p-3 rounded-lg ${
-          isDark ? 'bg-gray-700' : 'bg-gray-100'
+          isDark ? 'bg-gray-700' : 'bg-gray-400 text-black'
         }`}>
           <div className="text-sm opacity-75">Visibility</div>
           <div className="font-semibold">
@@ -193,7 +193,7 @@ const WeatherCard = () => {
         </div>
         
         <div className={`p-3 rounded-lg ${
-          isDark ? 'bg-gray-700' : 'bg-gray-100'
+          isDark ? 'bg-gray-700' : 'bg-gray-400 text-black'
         }`}>
           <div className="text-sm opacity-75">Last Update</div>
           <div className="font-semibold text-sm">

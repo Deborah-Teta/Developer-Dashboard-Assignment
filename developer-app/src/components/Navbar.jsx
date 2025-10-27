@@ -1,6 +1,6 @@
 // components/Navbar.js
 import React from 'react';
-import { useTheme } from '../context/ThemeProvider';
+import {useTheme} from '../context/ThemeProvider';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -12,7 +12,7 @@ const Navbar = () => {
         : 'bg-white text-gray-800'
     }`}>
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold">DevDashboard</h1>
+        <h1 className="text-xl font-bold">Developer Dashboard</h1>
         
         <button
           onClick={toggleTheme}

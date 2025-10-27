@@ -10,7 +10,6 @@ export default function useWeather() {
             setLoading(true);
             setError(null);
             try {
-                // Get user's location first
                 const position = await new Promise((resolve, reject) => {
                     navigator.geolocation.getCurrentPosition(resolve, reject);
                 });
@@ -46,7 +45,6 @@ export default function useWeather() {
                 console.error("Weather fetch error:", error);
                 setError(error.message);
                 
-                // Try to load cached data
                 const cached = localStorage.getItem("weather-current");
                 if (cached) {
                     setData(JSON.parse(cached));
